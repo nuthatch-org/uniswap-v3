@@ -1,6 +1,6 @@
 # uniswap-v3
 
-A [nuthatch](https://github.com/nightswatchhq/nuthatch) nest that indexes **Uniswap V3** — every
+A [nuthatch](https://github.com/nuthatch-org/nuthatch) nest that indexes **Uniswap V3** — every
 pool, discovered automatically from the factory, and its swaps, mints, and burns — into a local SQL
 database. One binary, one config file, no graph-node, no gateway, no query fees.
 
@@ -66,7 +66,7 @@ nuthatch sql --dir . "SELECT pool, swaps, volume_token0, volume_token1 FROM pool
 ## Run it
 
 ```sh
-nuthatch init --from https://github.com/nightswatchhq/uniswap-v3   # clone this nest
+nuthatch init --from https://github.com/nuthatch-org/uniswap-v3   # clone this nest
 # point rpc_urls at your endpoint (a free Alchemy/Infura/dRPC key works great)
 nuthatch dev --dir . --backfill 10000000 --seal-direct --window 5000 \
   --state-rpc https://<your-archive-endpoint>                       # a recent slice
